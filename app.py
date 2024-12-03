@@ -16,7 +16,7 @@ def process_csv(file):
         return ' '.join(parts)
     
     # Apply the function and create a new column
-    df['Mailing Address'] = df.apply(combine_columns, axis=1)
+    df['Address'] = df.apply(combine_columns, axis=1)
     
     # Drop the original columns
     df = df.drop(columns=columns_to_combine)
