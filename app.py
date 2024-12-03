@@ -20,6 +20,7 @@ def process_csv(file):
     
     # Drop the original columns
     df = df.drop(columns=columns_to_combine)
+    df.rename(columns={'City (Mailing Addr)': 'City'}, inplace=True)
     return df
 
 # Streamlit App
